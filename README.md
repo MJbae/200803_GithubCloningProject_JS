@@ -1,5 +1,5 @@
 # 200803_GithubCloningProject_JS_HTML_CSS
-> 유명 서비스 대상 Cloning Project 수행에 따른 실무 개발역량 확보
+> Github MainPage 대상 Cloning Project 수행에 따른 실무 개발역량 확보
 
 ## 기간
 
