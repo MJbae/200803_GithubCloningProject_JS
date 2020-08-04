@@ -47,7 +47,12 @@
 </head>
 
 <body>
-  Hello word!
+  <!--BEM(block element modifier)을 CSS 작명규칙으로 사용
+  __: ~의 구조적 일부분 // --: ~의 상태 ex) btn-danger, btn-warning // -: 일반적인 작명 ex) toggle-btn  -->
+  <div class="body__container">
+    <div class="btn">Hello</div>
+    <div class="btn btn--primary">Primary</div>
+  </div>
 </body>
 
 </html>

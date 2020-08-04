@@ -1,4 +1,55 @@
-body {
+  /* COMMON */
+.body__container {
+  /* default font로 roboto를 설정, 지원 안될 시 고딕체 대체 */
   font-family: 'Roboto', sans-serif;
-  background: tomato;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* BTN */
+.btn {
+  height: 34px;
+  background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+
+  /*수직적 가운데 정렬(align-items)
+  수평적 가운데 정렬 기능 넣지 않고 flex 활용
+  -> 1. width 삭제 2. padding 추가, display: inline-flex 적용
+  TODO: flex 학습 후 재확인할 것
+  */
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  /*버튼에 커서 올리면 커서가 포인터 모양으로 변환*/
+  cursor: pointer;
+    /*padding 등 여백 적용 시 박스의 크기를 제한*/
+  box-sizing: border-box;
+  position: relative;
+}
+.btn:hover::before{
+  content: "";
+  /*자식요소에서 position absolute 사용하기 위해 부모요소에 relative 추가
+  TODO: 여기서 position을 왜 사용하나? 무슨 목적?
+  TODO: 가상요소 선택자(before) 재정리 + 선택자 재정리
+  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*부모 배경색의 검은색 부분의 7%만 사용*/
+  background: rgba(0,0,0,0.07);
+
+}
+.btn.btn--primary{
+  border: 1px solid #65b836;
+  color: #fff;
+  background: #55a532 linear-gradient(#91dd70, #55ae2e);
 }
