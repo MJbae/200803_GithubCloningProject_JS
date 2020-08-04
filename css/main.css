@@ -77,3 +77,31 @@
 .input--text::-webkit-input-placeholder { color: #cacaca}
 .input--text::-ms-input-placeholder { color: #cacaca}
 .input--text::-moz-input-placeholder { color: #cacaca}
+
+/* HEADER */
+header {
+  border-bottom: 1px solid rgba(0,0,0,0.75);
+  box-shadow: 0 0 5px rgba(0,0,0,0.75);
+  /* 브라우저별 색상속성의 텍스트를 읽는 방법이 다르므로 16진수표현 권장 */
+  background: #fff;
+}
+header .inner{
+  /* header가 아닌 header .inner에 height을 삽입하는 이유는 
+  height의 default는 auto이므로 지식요소에 height을 추가함으로써 자동으로 부모요소에
+  같은 높이가 추가됨 */
+  height: 78px;
+  /* 아래 두 가지 속성에 따라 수평적 가운데 정렬 가능, 반드시 width가 정의되어야 의도대로 기능 */
+  max-width: 980px;
+  margin: 0 auto;
+}
+/* header .inner .menu-group 으로 선택하여 속성 입력 가능하나 직관적으로 표기하기 위해 본문의 방식 권장 */
+header .menu-group{
+  /* 아래 속성으로 자식요소(후손요소 X)들의 수평정렬 가능 */
+  display: flex;
+}
+header .logo{
+  
+}
+header .main-menu{
+  display: flex;
+}

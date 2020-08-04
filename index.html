@@ -50,9 +50,29 @@
   <!--BEM(block element modifier)을 CSS 작명규칙으로 사용
   __: ~의 구조적 일부분 // --: ~의 상태 ex) btn-danger, btn-warning // -: 일반적인 작명 ex) toggle-btn  -->
   <div class="body__container">
-    <div class="btn">Hello</div>
-    <div class="btn btn--primary">Primary</div>
-    <input type="text" class="input--text" placeholder="Search GitHub">
+    <!-- HEADER -->
+    <!-- section이라는 class 적용에 따라 태그에 관계없이 공통된 style 적용 가능 -->
+    <header class="section">
+      <div class="inner">
+
+        <div class="menu-group">
+          <div class="logo">
+            <a href="#">GitHub</a>
+          </div>
+          <!-- menu 안에는 ul-li 관계로 정리하는 것을 권장 -->
+          <ul class="main-menu">
+            <li><a href="#">Personal</a></li>
+            <li><a href="#">Open source</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Explore</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+
+    </header>
+
   </div>
 </body>
 
