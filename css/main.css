@@ -53,3 +53,21 @@
   color: #fff;
   background: #55a532 linear-gradient(#91dd70, #55ae2e);
 }
+
+.input--text{
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  /* TODO: height과 padding 등의 영향으로 커지는 것을 제한함? 어떻게? box-sizing에 대해 추가 학습 */
+  box-sizing: border-box;
+  /* input 박스 클릭 시 border 부분에 변화생김, 이를 제어하는 방법 중 inline은 까다로움으로 none 처리*/
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  font-size: 16px;
+}
+.input--text:focus {
+  border-color: #51a7e8;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075), 
+              0 0 5px rgba(81,167,232,0.5);
+}
