@@ -98,10 +98,31 @@ header .inner{
 header .menu-group{
   /* 아래 속성으로 자식요소(후손요소 X)들의 수평정렬 가능 */
   display: flex;
+  /* 아래 속성으로 해당 아이디의 높이를 기준으로 자식요소 수직정렬 */
+  align-items: center;
+  height: 100%;
 }
 header .logo{
-  
+  margin-right: 10px;
+}
+header .logo a{
+  background: url("../img/logo.svg");
+  width: 32px;
+  height: 32px;
+  display: block;
+  /* html로 삽입한 text는 img의 대체요소가 됨으로 제거하지 않고 text를 밀어버림 */
+  text-indent: -9999px;
+}
+header .logo a:hover{
+  background: url("../img/logo_on.svg");
 }
 header .main-menu{
   display: flex;
+}
+header .main-menu li a{
+  /* inline 요소인 a 태그에 block 속성을 부여하기 위해 아래 속성 추가 */
+  display: block;
+  /* a 태그 영역을 4방위에서 10px 늘림으로써 UX 향상 */
+  padding: 10px;
+  color: #3c4146;
 }
