@@ -1,5 +1,5 @@
 # 200803_GithubCloningProject_JS_HTML_CSS
-> 서비스 중인 웹페이지 대상 Cloning Project 수행에 따라 실무 개발능력 향상
+> 유명 서비스 대상 Cloning Project 수행에 따른 실무 개발역량 확보
 
 ## 기간
 
@@ -7,6 +7,6 @@
 
 ## 개발환경
 
-- [JS]
-- [HTML]
-- [CSS]
+- JS
+- HTML
+- CSS
