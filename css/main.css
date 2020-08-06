@@ -103,7 +103,7 @@ a {
   line-height: 1.25;
   margin-bottom: 18px;
 }
-.summary__discription {
+.summary__description {
   font-size: 26px;
   font-weight: 300;
   color: #767676;
@@ -263,7 +263,7 @@ header .sub-menu li a {
 }
 #sign-form .input--text {
   width: 100%;
-  height: 100%;
+  height: 40px;
 }
 #sign-form .caption {
   font-size: 12px;
