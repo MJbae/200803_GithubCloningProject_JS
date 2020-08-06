@@ -40,16 +40,13 @@ a {
 }
 .btn:hover::before{
   content: "";
-  /*자식요소에서 position absolute 사용하기 위해 부모요소에 relative 추가
-  TODO: 여기서 position을 왜 사용하나? 무슨 목적?
-  TODO: 가상요소 선택자(before) 재정리 + 선택자 재정리
-  */
   position: absolute;
+  /* top left 0으로 설정해야 부모요소 기준으로 position이 정확히 일치하는 곳에서 hover 가능 */
   top: 0;
   left: 0;
+  /* hover 시 부모요소와 같은 크기로 설정 */
   width: 100%;
   height: 100%;
-  /*부모 배경색의 검은색 부분의 7%만 사용*/
   background: rgba(0,0,0,0.07);
 
 }
@@ -84,10 +81,8 @@ a {
 
 
 /* FLOAT CLEARFIX */
-/* TODO: after before에 대해 재정리 필요 + float 학습 */
 .clearfix::after {
   content: "";
-  /* TODO: clear가 뭐지? */
   clear: both;
   display: block;
 }
@@ -118,9 +113,8 @@ header {
   background: #fff;
 }
 header .inner{
-  /* header가 아닌 header .inner에 height을 삽입하는 이유는 
-  height의 default는 auto이므로 지식요소에 height을 추가함으로써 자동으로 부모요소에
-  같은 높이가 추가됨 */
+  /* header가 아닌 header .inner에 height을 삽입하는 이유는 height의 default는 
+  auto이므로 지식요소에 height을 추가함으로써 자동으로 부모요소에 같은 높이가 추가됨 */
   height: 78px;
   /* 아래 두 가지 속성에 따라 수평적 가운데 정렬 가능, 반드시 width가 정의되어야 의도대로 기능 */
   max-width: 980px;
