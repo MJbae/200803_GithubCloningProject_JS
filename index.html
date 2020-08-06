@@ -96,12 +96,29 @@
             How people build software
           </div>
           <div class="summary__description">
-            Millions of developers use GitHub to build personal projects, support their businesses, and work together on
-            open source technologies.
+            Millions of developers use GitHub to build personal projects, support their businesses, </br>
+            and work together on open source technologies.
           </div>
         </div>
 
-        <form id="sign-form" method="POST" action=""></form>
+        <form id="sign-form" method="POST" action="">
+          <!-- input 요소는 inline 속성(수평으로 생성) 있으므로 블록 요소로 감쌈 div 보다 구조상 list 권장 -->
+          <ul>
+            <li><input type="text" class="input--text" placeholder="Pick a username"></li>
+            <li><input type="email" class="input--text" placeholder="Your email address"></li>
+            <li>
+              <!-- li 안에 p 태그로 text를 붙이는 이유는 효율적으로 여백 처리하기 위해 -->
+              <input type="password" class="input--text" placeholder="Create a password">
+              <p class="caption">Use at least one letter, one numeral, and seven characters.</p>
+            </li>
+            <li>
+              <button type="submit" class="btn btn--primary">Sign up for GitHub</button>
+              <p class="caption">By clicking "Sign up for GitHub", you agree to our terms of service and privacy
+                policy.
+                We'll occasionally send you account related emails.</p>
+            </li>
+          </ul>
+        </form>
 
       </div>
     </section>

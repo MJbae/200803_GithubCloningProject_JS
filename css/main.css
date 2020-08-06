@@ -217,10 +217,12 @@ header .sub-menu li a {
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-position: bottom left;
+  background-size: cover;
 }
 /* 배경이미지 안에 회색계열의 배경을 덧붙여서 전체적으로 어두운 느낌을 보여줌 */
 .section--visual::before {
   content: "";
+  /* 부모 요소인 section--visual에 position: relative;가 없지만 .section에 해당 속성이 있으므로 relative 사용 가능 */
   position: absolute;
   top: 0;
   left: 0;
