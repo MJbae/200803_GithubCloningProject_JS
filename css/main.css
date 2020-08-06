@@ -98,10 +98,31 @@ a {
 
 }
 .summary__title {
-
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 18px;
 }
 .summary__discription {
+  font-size: 26px;
+  font-weight: 300;
+  color: #767676;
+  line-height: 1.5;
 
+}
+/* SECTION INNER */
+.section {
+  /* 큼직한 블록 안에 relative를 선언하는 것이 추후 사용성 증가 */
+  position: relative;
+}
+/* 수평적 가운데 정렬 가능, 반드시 width가 정의되어야 함 */
+/* refactor: .inner 안에 공통적으로 들어가므로 본문과 같이 독립 적용 */
+.section .inner {
+  max-width: 980px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+  position: relative;
 }
 
 
@@ -116,9 +137,6 @@ header .inner{
   /* header가 아닌 header .inner에 height을 삽입하는 이유는 height의 default는 
   auto이므로 지식요소에 height을 추가함으로써 자동으로 부모요소에 같은 높이가 추가됨 */
   height: 78px;
-  /* 아래 두 가지 속성에 따라 수평적 가운데 정렬 가능, 반드시 width가 정의되어야 의도대로 기능 */
-  max-width: 980px;
-  margin: 0 auto;
 }
 /* header .inner .menu-group 으로 선택하여 속성 입력 가능하나 직관적으로 표기하기 위해 본문의 방식 권장 */
 header .menu-group{
@@ -192,4 +210,32 @@ header .sub-menu li a {
   display: block;
   font-size: 13px;
   color: #3c4146;
+}
+
+/* VISUAL */
+.section--visual {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+/* 배경이미지 안에 회색계열의 배경을 덧붙여서 전체적으로 어두운 느낌을 보여줌 */
+.section--visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.3);
+}
+.section--visual .inner {
+  padding: 160px 0;
+}
+/* color를 inner 안에 사용하지 않은 이유는 재사용성 때문, 흰 글씨는 summary page에만 사용됨 */
+.section--visual .summary__title {
+  color: #fff;
+  font-size: 54px;
+}
+.section--visual .summary__description {
+  color: #fff;
 }
